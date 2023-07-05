@@ -1,0 +1,15 @@
+node {
+    stage('Retrieve Salesforce Metadata') {
+        dir('C:/ANT_MIG_Tool/sample') {
+            // Specify the desired Ant version here
+            bat 'ant retrieveUnpackaged'
+        }
+    }
+    
+    stage('Deploy Salesforce Metadata check') {
+        dir('C:/ANT_MIG_Tool/sample') {
+            // Specify the desired Ant version here
+            bat 'ant deployUnpackaged'
+        }
+    }
+}
